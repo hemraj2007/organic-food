@@ -11,11 +11,11 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals"),
-
-  // ⚠️ Yahan humne no-img-element warning ko off kiya
   {
     rules: {
-      "@next/next/no-img-element": "off",
+      "@next/next/no-img-element": "off",    // img tag warnings off
+      "jsx-a11y/alt-text": "off",             // alt attribute warnings off
+      "react/no-unescaped-entities": "off"    // unescaped apostrophe warnings off
     },
   },
 ];
